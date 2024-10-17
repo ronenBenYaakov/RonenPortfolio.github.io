@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronen Ben Yaakov's Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+<header>
+    <h1 id="header">Ronen Ben Yaakov</h1>
+</header>
+
+<section>
+    <h2>Contact Me</h2>
+    <button id="contact-button" onclick="navigateToWebsite()">Go to My Website</button>
+</section>
+
+<script>
+    const starsContainer = document.createElement('div');
+    starsContainer.classList.add('stars');
+    document.body.appendChild(starsContainer);
+
+    const numberOfStars = 100; // Adjust the number of stars as needed
+
+    for (let i = 0; i < numberOfStars; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+
+        // Random position and size for stars
+        const size = Math.random() * 3 + 1; // Size between 1 and 4 pixels
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        star.style.top = `${Math.random() * 100}vh`;
+        star.style.left = `${Math.random() * 100}vw`;
+        starsContainer.appendChild(star);
+    }
+</script>
+
+<footer>
+    <p>This Site Was Created Using JavaScript, HTML, CSS</p>
+</footer>
+
+<script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
